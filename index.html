@@ -1,49 +1,67 @@
-<!doctype html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+						<h2>Slides mit Bild als Hintergrund</h2>
+						
+					</section>
+					
+			
+					<section data-background="https://media.giphy.com/media/l2Je3ktsieOfOGa1G/giphy.gif">
+						<h2>Slides mit Gif als Hintergrund</h2>
+					</section>
+				
+				
+				
+				<section>
+					<h2>Überblick oder kurze Pause?</h2>
+					
+     
+					<p>Drücke auf Esc oder B. Und mit Klick auf S bekommst Du eine Speakers-Ansicht</p>
+					
+					<aside class="notes">
+	Hier steht Text, der für die vortragenden Person wichtig ist, aber nicht direkt in der Präsentation nicht auftaucht.
+</aside>
+				</section>
 
-		<title>reveal.js</title>
+			
+				<section>
+					<h1>JETZT bist Du dran!</h1>
+					<p>
+						👉 <a href="https://github.com/eBildungslabor/slides/blob/master/README.md">Lies Dir die Schritt für Schritt Anleitung durch.</a> <br>
+					</p>
+				</section>
 
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
-
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/monokai.css">
-
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				
+<!-- 
+Jeztzt sind wir fertig mit den Slides.
+Abschließend folgen noch einige Einstellungen. 
+Insbesondere kannst Du bei 'transition' festlegen, wie der Übergang zwischen Slides gestaltet sein soll.   
+-->
+	
 			</div>
+
 		</div>
 
+		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
 
 		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
+			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				transition: 'zoom', // none/fade/slide/convex/concave/zoom
+				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true }
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/search/search.js', async: true },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
 		</script>
+
 	</body>
 </html>
